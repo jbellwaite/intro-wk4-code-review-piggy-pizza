@@ -3,13 +3,13 @@ function PizzaOrder(meat, cheese, veggies, sauce, size) {
   this.userCheese = cheese;
   this.userVeggies = veggies;
   this.userSauce = sauce;
-  this.size = size;
+  this.userSize = size;
 }
 
 PizzaOrder.prototype.pizzaPrice = function () {
-  if (this.size === "Small") {
+  if (this.userSize === "Small") {
     return "10";
-  }else if (this.size === "Medium") {
+  }else if (this.userSize === "Medium") {
     return "15";
   }else {
     return "20";
@@ -17,18 +17,33 @@ PizzaOrder.prototype.pizzaPrice = function () {
 }
 
 
+
 $(document).ready(function() {
   $("#pizza").submit(function(event) {
     event.preventDefault();
-    var selectMeat = $("#meat").val();
-    var selectCheese = $("#cheese").val();
-    var selectVeggies = $("#veggies").val();
-    var selectSauce = $("#sauce").val();
-    var selectSize = $("#size").val();
+    var meat = $("#meat").val();
+    var cheese = $("#cheese").val();
+    var veggies = $("#veggies").val();
+    var sauce = $("#sauce").val();
+    var size = $("#size").val();
 
-    var pizzaStyle = new PizzaOrder (meat, cheese, veggies, sauce, size);
+    var pizzaStyle = new PizzaOrder(meat, cheese, veggies, sauce, size);
     pizzaStyle.pizzaPrice();
-    console.log(pizzaStyle.pizzaPrice);
-    $("#output").text("hey");
+
+    $("#output").show();
+    $("#order-recap").text(
+      "A " +
+      pizzaStyle.userSize +
+      " pizza, with " +
+       pizzaStyle.userMeat +
+      " , " +
+      pizzaStyle.userCheese +
+      " , " +
+      pizzaStyle.userVeggies +
+      " and " +
+      pizzaStyle.userSauce
+    );
+    $("#cost").text(pizzaStyle.pizzaPrice);
+
   });
 });

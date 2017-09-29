@@ -12,8 +12,13 @@
     <div class="container">
       <h1>Piggy Pizza</h1>
       <h2>Order Form</h2>
-      <h3>Step 1: Choose your toppings:</h3>
+      <h3>Step 1: Enter your name:</h3>
       <form id="pizza">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" required></input>
+        </div>
+      <h3>Step 2: Choose your toppings:</h3>
         <div class="form-group">
           <label for="meat">Select a meat topping</label>
           <select class="form-control" id="meat">
@@ -60,8 +65,10 @@
         <button class="btn btn-primary" type="submit">Calculate your Pizza Subtotal</button>
     </form>
 
-<div class="output">
-</div>
+    <div class="well" id="output">
+      <p>Your order for: <span id="order-recap"></span></p>
+      <p>Subtotal: $<span id="cost"></span</p>
+    </div>
 
     </div>
   </body>
