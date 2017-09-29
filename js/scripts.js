@@ -49,12 +49,13 @@ $(document).ready(function() {
       pizzaStyle.userSize +
       " pizza, with " +
        pizzaStyle.userMeat +
-      " , " +
+      ", " +
       pizzaStyle.userCheese +
-      " , " +
+      ", " +
       pizzaStyle.userVeggies +
       " and " +
-      pizzaStyle.userSauce
+      pizzaStyle.userSauce +
+      " will be: "
     );
     $("#cost").text(pizzaStyle.pizzaPrice());
   });

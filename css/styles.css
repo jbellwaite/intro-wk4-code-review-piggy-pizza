@@ -1,7 +1,31 @@
 #output {
   display: none;
+  text-align: center;
+  color: green;
 }
 
-.address {
-  display: none;
+h1, h2 {
+  text-align: center;
 }
+/*.address {
+  display: none;
+}*/
+
+.jumbotron {
+  background-image: url(../img/pigs.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 700px;
+  background-color: #f48bb9;
+  color: #f48bb9;
+  text-shadow: 2px 2px white;
+}
+ body {
+   background-image: url(../img/pizza.jpeg);
+ }
+
+ #pig {
+   display: block;
+    margin: auto;
+    width: 30%;
+ }
