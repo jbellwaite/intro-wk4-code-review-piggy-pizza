@@ -3,38 +3,51 @@
   <head>
     <meta charset="utf-8">
     <title>Piggy Pizzy</title>
-    <script src="js/jquery-3.2.1(1).js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
     <link src="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>Piggy Pizza>
-      <h2>Order Form</h2>
-        <form action="#">
-          <p>
-            <input type="checkbox" id="topping1"/>
-            <label for="topping1">Cheese</label>
-          </p>
-          <p>
-            <input type="checkbox" id="topping2"/>
-            <label for="topping2">Pepperoni</label>
-          </p>
-          <p>
-            <input type="checkbox" id="topping3"/>
-            <label for="topping3">Sausage</label>
-          </p>
-          <p>
-            <input type="checkbox" id="topping4"/>
-            <label for="topping4">Canadian Bacon</label>
-          </p>
-          <p>
-            <input type="checkbox" id="topping5"/>
-            <label for="topping5">Canadian Bacon</label>
-          </p>
+    <div class="container">
+      <h1>Piggy Pizza</h1>
+        <h2>Order Form</h2>
+        <h3>Step 1: Choose your toppings:</h3>
+          <form action="#" id="toppings">
+            <p>
+              <input type="checkbox" id="topping1"/>
+              <label for="topping1">Cheese</label>
+            </p>
+            <p>
+              <input type="checkbox" id="topping2"/>
+              <label for="topping2">Pepperoni</label>
+            </p>
+            <p>
+              <input type="checkbox" id="topping3"/>
+              <label for="topping3">Sausage</label>
+            </p>
+            <p>
+              <input type="checkbox" id="topping4"/>
+              <label for="topping4">Canadian Bacon</label>
+            </p>
+            <p>
+              <input type="checkbox" id="topping5"/>
+              <label for="topping5">Canadian Bacon</label>
+            </p>
+          </form>
+        <h3>Step 2: Choose the pizza size:</h3>
+          <div class="input-field col s6">
+            <select>
+              <option value="" disabled selected>Choose a size</option>
+              <option value="1">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
+            <label>Pizza Size</label>
+          </div>
 
-    </form>
 
+    </div>
   </body>
 </html>
