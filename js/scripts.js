@@ -1,23 +1,20 @@
-function PizzaOrder(topping1, topping2, topping3, topping4, size) {
-  this.userTopping1 = topping1;
-  this.userTopping2 = topping2;
-  this.userTopping3 = topping3;
-  this.userTopping4 = topping4;
+function PizzaOrder(toppings, size) {
+  this.userToppings = [toppings];
   this.userSize = size;
 }
 
 
 
-$(document).ready(function(){
-  $("form#toppings").submit(function(event){
+$(document).ready(function() {
+  alert ("hey");
+  var select = $('select').material_select();
+  $("#toppings").submit(function(event) {
     event.preventDefault();
-    var selectTopping1 = $("#topping1").val();
-    var selectTopping2 = $("#topping2").val();
-    var selectTopping3 = $("#topping3").val();
-    var selectTopping4 = $("#topping4").val();
-    $('select').material_select();
+    var selectTopping = $("#toppings").val();
+    var selectSize = $("size").val();
+    var selectPizza = new PizzaOrder(toppings, size);
 
-    var selectPizza = new PizzaOrder(topping1, topping2, topping3, topping4, size);
-    console.log(selectPizza);
-  })
-})
+
+    $("#output").text(selectTopping1)
+  });
+});
