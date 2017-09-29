@@ -14,10 +14,50 @@
       <h2>Order Form</h2>
       <h3>Step 1: Choose your toppings:</h3>
       <form id="pizza">
-      
+        <div class="form-group">
+          <label for="meat">Select a meat topping</label>
+          <select class="form-control" id="meat">
+            <option>Pepperoni</option>
+            <option>Sausage</option>
+            <option>Canadian Bacon</option>
+            <option>No meat/vegetarian</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="cheese">Select type of cheese</label>
+          <select class="form-control" id="cheese">
+            <option>Mozzerella</option>
+            <option>Cheddar</option>
+            <option>Feta</option>
+            <option>No cheese/vegan</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="veggies">Select type of veggies</label>
+          <select class="form-control" id="veggies">
+            <option>Mushrooms</option>
+            <option>Olives</option>
+            <option>Peppers</option>
+            <option>No veggies</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="sauce">Select type of sauce</label>
+          <select class="form-control" id="sauce">
+            <option>Marinara</option>
+            <option>White Sauce</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="size">Select Size</label>
+          <select class="form-control" id="size">
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+          </select>
+        </div>
 
-      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-      </button>
+        <button class="btn btn-primary" type="submit">Calculate your Pizza Subtotal</button>
     </form>
 
 <div class="output">

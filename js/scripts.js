@@ -1,20 +1,34 @@
-function PizzaOrder(toppings, size) {
-  this.userToppings = [toppings];
-  this.userSize = size;
+function PizzaOrder(meat, cheese, veggies, sauce, size) {
+  this.userMeat = meat;
+  this.userCheese = cheese;
+  this.userVeggies = veggies;
+  this.userSauce = sauce;
+  this.size = size;
+}
+
+PizzaOrder.prototype.pizzaPrice = function () {
+  if (this.size === "Small") {
+    return "10";
+  }else if (this.size === "Medium") {
+    return "15";
+  }else {
+    return "20";
+  }
 }
 
 
-
 $(document).ready(function() {
-  alert ("hey");
-  var select = $('select').material_select();
-  $("#toppings").submit(function(event) {
+  $("#pizza").submit(function(event) {
     event.preventDefault();
-    var selectTopping = $("#toppings").val();
-    var selectSize = $("size").val();
-    var selectPizza = new PizzaOrder(toppings, size);
+    var selectMeat = $("#meat").val();
+    var selectCheese = $("#cheese").val();
+    var selectVeggies = $("#veggies").val();
+    var selectSauce = $("#sauce").val();
+    var selectSize = $("#size").val();
 
-
-    $("#output").text(selectTopping1)
+    var pizzaStyle = new PizzaOrder (meat, cheese, veggies, sauce, size);
+    pizzaStyle.pizzaPrice();
+    console.log(pizzaStyle.pizzaPrice);
+    $("#output").text("hey");
   });
 });
