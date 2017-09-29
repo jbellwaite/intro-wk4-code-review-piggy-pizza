@@ -30,7 +30,6 @@ $(document).ready(function() {
     var size = $("#size").val();
 
     var pizzaStyle = new PizzaOrder(name, meat, cheese, veggies, sauce, size);
-    pizzaStyle.pizzaPrice();
 
     $("#output").show();
     $("#order-recap").text(pizzaStyle.userName +
@@ -45,7 +44,7 @@ $(document).ready(function() {
       " and " +
       pizzaStyle.userSauce
     );
-    $("#cost").text(pizzaStyle.pizzaPrice);
+    $("#cost").text(pizzaStyle.pizzaPrice());
 
   });
 });
