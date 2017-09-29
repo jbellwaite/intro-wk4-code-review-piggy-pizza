@@ -16,7 +16,7 @@
       <form id="pizza">
         <div class="form-group">
           <label for="name">Name:</label>
-          <input type="text" required></input>
+          <input type="text" required id="name"></input>
         </div>
       <h3>Step 2: Choose your toppings:</h3>
         <div class="form-group">
@@ -66,7 +66,8 @@
     </form>
 
     <div class="well" id="output">
-      <p>Your order for: <span id="order-recap"></span></p>
+      <div id="order-recap">
+      </div>
       <p>Subtotal: $<span id="cost"></span</p>
     </div>
 
