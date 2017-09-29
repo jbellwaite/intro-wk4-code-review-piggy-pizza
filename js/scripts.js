@@ -1,4 +1,4 @@
-PizzaOrder function(topping1, topping2, topping3, topping4, size) {
+function PizzaOrder(topping1, topping2, topping3, topping4, size) {
   this.userTopping1 = topping1;
   this.userTopping2 = topping2;
   this.userTopping3 = topping3;
@@ -15,9 +15,9 @@ $(document).ready(function(){
     var selectTopping2 = $("#topping2").val();
     var selectTopping3 = $("#topping3").val();
     var selectTopping4 = $("#topping4").val();
-    var selectSize = $('select').material_select();
+    $('select').material_select();
 
-    var selectTopping = new PizzaTopping(topping1, topping2, topping3, topping4, size);
-    console.log(selectTopping);
+    var selectPizza = new PizzaOrder(topping1, topping2, topping3, topping4, size);
+    console.log(selectPizza);
   })
 })
